@@ -1185,3 +1185,463 @@ Please make sure you have the correct access rights
 and the repository exists.
 Rubis:)
 
+Last login: Mon Feb 10 10:38:25 on ttys000
+Rubis:) gem install bootstrap-sass
+Fetching: bootstrap-sass-3.1.0.2.gem (100%)
+Successfully installed bootstrap-sass-3.1.0.2
+Parsing documentation for bootstrap-sass-3.1.0.2
+Installing ri documentation for bootstrap-sass-3.1.0.2
+Done installing documentation for bootstrap-sass after 0 seconds
+1 gem installed
+Rubis:) bundle install
+Resolving dependencies...
+Using rake (10.1.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.8.4)
+Using atomic (1.1.14)
+Using thread_safe (0.1.3)
+Using tzinfo (0.3.38)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.3)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.1)
+Using activerecord (4.0.2)
+Using sass (3.2.14)
+Using bootstrap-sass (3.1.0.2)
+Using bundler (1.5.2)
+Using mini_portile (0.5.2)
+Using nokogiri (1.6.1)
+Using xpath (2.0.0)
+Using capybara (2.2.1)
+Using ffi (1.9.3)
+Using childprocess (0.4.0)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.18.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using diff-lcs (1.2.5)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Using tilt (1.4.1)
+Using sprockets (2.10.1)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using rspec-core (2.13.1)
+Using rspec-expectations (2.13.0)
+Using rspec-mocks (2.13.1)
+Using rspec-rails (2.13.1)
+Using rubyzip (0.9.9)
+Using sass-rails (4.0.1)
+Using sdoc (0.4.0)
+Using websocket (1.0.7)
+Using selenium-webdriver (2.35.1)
+Using sqlite3 (1.3.8)
+Using turbolinks (2.2.1)
+Using uglifier (2.4.0)
+Your bundle is complete!
+Gems in the group production were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Rubis:) bundle install
+Using rake (10.1.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.8.4)
+Using atomic (1.1.14)
+Using thread_safe (0.1.3)
+Using tzinfo (0.3.38)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.3)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.1)
+Using activerecord (4.0.2)
+Using sass (3.2.14)
+Using bootstrap-sass (3.1.0.2)
+Using mini_portile (0.5.2)
+Using nokogiri (1.6.1)
+Using xpath (2.0.0)
+Using capybara (2.2.1)
+Using ffi (1.9.3)
+Using childprocess (0.4.0)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.18.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using diff-lcs (1.2.5)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Using bundler (1.5.2)
+Using tilt (1.4.1)
+Using sprockets (2.10.1)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using rspec-core (2.13.1)
+Using rspec-expectations (2.13.0)
+Using rspec-mocks (2.13.1)
+Using rspec-rails (2.13.1)
+Using rubyzip (0.9.9)
+Using sass-rails (4.0.1)
+Using sdoc (0.4.0)
+Using websocket (1.0.7)
+Using selenium-webdriver (2.35.1)
+Using sqlite3 (1.3.8)
+Using turbolinks (2.2.1)
+Using uglifier (2.4.0)
+Your bundle is complete!
+Gems in the group production were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Rubis:) bundle exec rspec spec/requests/static_pages_spec.rb
+....F..FF
+
+Failures:
+
+1) Static pages Home page should not have a custom page title
+Failure/Error: expect(page).not_to have_title('| Home')
+expected #has_title?("| Home") to return false, got true
+# ./spec/requests/static_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+2) Static pages About page Contact page should have the content 'Contact'
+Failure/Error: expect(page).to have_content('Contact')
+expected #has_content?("Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:52:in `block (4 levels) in <top (required)>'
+
+3) Static pages About page Contact page should have the title 'Contact'
+Failure/Error: expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
+expected #has_title?("Ruby on Rails Tutorial Sample App | Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:57:in `block (4 levels) in <top (required)>'
+
+Finished in 3.57 seconds
+9 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:17 # Static pages Home page should not have a custom page title
+rspec ./spec/requests/static_pages_spec.rb:50 # Static pages About page Contact page should have the content 'Contact'
+rspec ./spec/requests/static_pages_spec.rb:55 # Static pages About page Contact page should have the title 'Contact'
+
+Randomized with seed 49389
+
+Rubis:) bundle exec rspec spec/requests/static_pages_spec.rb
+FFFFFFFFF
+
+Failures:
+
+1) Static pages Contact page should have the title 'Contact'
+Failure/Error: visit contact_path
+NameError:
+undefined local variable or method `contact_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_4:0x007f9347086330>
+# ./spec/requests/static_pages_spec.rb:57:in `block (3 levels) in <top (required)>'
+
+2) Static pages Contact page should have the content 'Contact'
+Failure/Error: visit contact_path
+NameError:
+undefined local variable or method `contact_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_4:0x007f93470709b8>
+# ./spec/requests/static_pages_spec.rb:52:in `block (3 levels) in <top (required)>'
+
+3) Static pages Help page should have the title 'Help'
+Failure/Error: visit help_path
+NameError:
+undefined local variable or method `help_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_2:0x007f93472f64a8>
+# ./spec/requests/static_pages_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+4) Static pages Help page should have the h1 'Help'
+Failure/Error: visit help_path
+NameError:
+undefined local variable or method `help_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_2:0x007f93470db7b8>
+# ./spec/requests/static_pages_spec.rb:26:in `block (3 levels) in <top (required)>'
+
+5) Static pages About page should have the title 'About Us'
+Failure/Error: visit about_path
+NameError:
+undefined local variable or method `about_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_3:0x007f934713ce78>
+# ./spec/requests/static_pages_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+6) Static pages About page should have the h1 'About Us'
+Failure/Error: visit about_path
+NameError:
+undefined local variable or method `about_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_3:0x007f93470ea7b8>
+# ./spec/requests/static_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+7) Static pages Home page should have the base title
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007f93474c2908>
+# ./spec/requests/static_pages_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+8) Static pages Home page should have the h1 'Sample App'
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007f9347350750>
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+9) Static pages Home page should not have a custom page title
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007f9347675ea8>
+# ./spec/requests/static_pages_spec.rb:18:in `block (3 levels) in <top (required)>'
+
+Finished in 0.012 seconds
+9 examples, 9 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:56 # Static pages Contact page should have the title 'Contact'
+rspec ./spec/requests/static_pages_spec.rb:51 # Static pages Contact page should have the content 'Contact'
+rspec ./spec/requests/static_pages_spec.rb:30 # Static pages Help page should have the title 'Help'
+rspec ./spec/requests/static_pages_spec.rb:25 # Static pages Help page should have the h1 'Help'
+rspec ./spec/requests/static_pages_spec.rb:43 # Static pages About page should have the title 'About Us'
+rspec ./spec/requests/static_pages_spec.rb:38 # Static pages About page should have the h1 'About Us'
+rspec ./spec/requests/static_pages_spec.rb:12 # Static pages Home page should have the base title
+rspec ./spec/requests/static_pages_spec.rb:7 # Static pages Home page should have the h1 'Sample App'
+rspec ./spec/requests/static_pages_spec.rb:17 # Static pages Home page should not have a custom page title
+
+Randomized with seed 30068
+
+Rubis:) bundle exec rspec spec/requests/static_pages_spec.rb
+FFFFF....
+
+Failures:
+
+1) Static pages Home page should have the h1 'Sample App'
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007ff7ff19f498>
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+2) Static pages Home page should have the base title
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007ff7ff5625d0>
+# ./spec/requests/static_pages_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+3) Static pages Home page should not have a custom page title
+Failure/Error: visit root_path
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007ff7fe90e1a8>
+# ./spec/requests/static_pages_spec.rb:18:in `block (3 levels) in <top (required)>'
+
+4) Static pages Contact page should have the title 'Contact'
+Failure/Error: expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
+expected #has_title?("Ruby on Rails Tutorial Sample App | Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:58:in `block (3 levels) in <top (required)>'
+
+5) Static pages Contact page should have the content 'Contact'
+Failure/Error: expect(page).to have_content('Contact')
+expected #has_content?("Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+Finished in 0.13831 seconds
+9 examples, 5 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:7 # Static pages Home page should have the h1 'Sample App'
+rspec ./spec/requests/static_pages_spec.rb:12 # Static pages Home page should have the base title
+rspec ./spec/requests/static_pages_spec.rb:17 # Static pages Home page should not have a custom page title
+rspec ./spec/requests/static_pages_spec.rb:56 # Static pages Contact page should have the title 'Contact'
+rspec ./spec/requests/static_pages_spec.rb:51 # Static pages Contact page should have the content 'Contact'
+
+Randomized with seed 12340
+
+Rubis:) bundle exec rspec spec/requests/static_pages_spec.rb
+FF..FFF..
+
+Failures:
+
+1) Static pages Contact page
+Failure/Error: it { should have_content('Contact') }
+expected #has_content?("Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:32:in `block (3 levels) in <top (required)>'
+
+2) Static pages Contact page
+Failure/Error: it { should have_title(full_title('Contact')) }
+expected #has_title?("Ruby on Rails Tutorial Sample App | Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:33:in `block (3 levels) in <top (required)>'
+
+3) Static pages Home page
+Failure/Error: before { visit root_path }
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007fc217908068>
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+4) Static pages Home page
+Failure/Error: before { visit root_path }
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007fc217a16108>
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+5) Static pages Home page
+Failure/Error: before { visit root_path }
+NameError:
+undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007fc217aec488>
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+Finished in 0.19206 seconds
+9 examples, 5 failures
+
+Failed examples:
+
+rspec ./spec/requests/static_pages_spec.rb:32 # Static pages Contact page
+rspec ./spec/requests/static_pages_spec.rb:33 # Static pages Contact page
+rspec ./spec/requests/static_pages_spec.rb:12 # Static pages Home page
+rspec ./spec/requests/static_pages_spec.rb:11 # Static pages Home page
+rspec ./spec/requests/static_pages_spec.rb:10 # Static pages Home page
+
+Randomized with seed 57620
+
+Rubis:) rails generate controller Users new --no-test-framework
+create  app/controllers/users_controller.rb
+route  get "users/new"
+invoke  erb
+create    app/views/users
+create    app/views/users/new.html.erb
+invoke  helper
+create    app/helpers/users_helper.rb
+invoke  assets
+invoke    coffee
+create      app/assets/javascripts/users.js.coffee
+invoke    scss
+create      app/assets/stylesheets/users.css.scss
+Rubis:) rails generate integration_test user_pages
+invoke  rspec
+create    spec/requests/user_pages_spec.rb
+Rubis:) bundle exec rspec spec/requests/user_pages_spec.rb
+FF
+
+Failures:
+
+1) User pages signup page
+Failure/Error: before { visit signup_path }
+NameError:
+undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007fc719ddcf88>
+# ./spec/requests/user_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+2) User pages signup page
+Failure/Error: before { visit signup_path }
+NameError:
+undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_1::Nested_1:0x007fc719de6c90>
+# ./spec/requests/user_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00261 seconds
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/requests/user_pages_spec.rb:10 # User pages signup page
+rspec ./spec/requests/user_pages_spec.rb:11 # User pages signup page
+
+Randomized with seed 701
+
+Rubis:) bundle exec rspec spec/
+FFFFFFF....
+
+Failures:
+
+1) User pages signup page
+Failure/Error: before { visit signup_path }
+NameError:
+undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_2::Nested_1:0x007fbc6250c550>
+# ./spec/requests/user_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+2) User pages signup page
+Failure/Error: before { visit signup_path }
+NameError:
+undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_2::Nested_1:0x007fbc63251a80>
+# ./spec/requests/user_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+3) Static pages Home page
+Failure/Error: before { visit root_path }
+ActionView::Template::Error:
+undefined local variable or method `signup_path' for #<#<Class:0x007fbc61afd398>:0x007fbc61afc3d0>
+# ./app/views/static_pages/home.html.erb:19:in `_app_views_static_pages_home_html_erb___3586678251224620440_70223534814840'
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+4) Static pages Home page
+Failure/Error: before { visit root_path }
+ActionView::Template::Error:
+undefined local variable or method `signup_path' for #<#<Class:0x007fbc61afd398>:0x007fbc6352a338>
+# ./app/views/static_pages/home.html.erb:19:in `_app_views_static_pages_home_html_erb___3586678251224620440_70223534814840'
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+5) Static pages Home page
+Failure/Error: before { visit root_path }
+ActionView::Template::Error:
+undefined local variable or method `signup_path' for #<#<Class:0x007fbc61afd398>:0x007fbc6189c0b8>
+# ./app/views/static_pages/home.html.erb:19:in `_app_views_static_pages_home_html_erb___3586678251224620440_70223534814840'
+# ./spec/requests/static_pages_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+6) Static pages Contact page
+Failure/Error: it { should have_title(full_title('Contact')) }
+expected #has_title?("Ruby on Rails Tutorial Sample App | Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:33:in `block (3 levels) in <top (required)>'
+
+7) Static pages Contact page
+Failure/Error: it { should have_content('Contact') }
+expected #has_content?("Contact") to return true, got false
+# ./spec/requests/static_pages_spec.rb:32:in `block (3 levels) in <top (required)>'
+
+Finished in 1.49 seconds
+11 examples, 7 failures
+
+Failed examples:
+
+rspec ./spec/requests/user_pages_spec.rb:11 # User pages signup page
+rspec ./spec/requests/user_pages_spec.rb:10 # User pages signup page
+rspec ./spec/requests/static_pages_spec.rb:10 # Static pages Home page
+rspec ./spec/requests/static_pages_spec.rb:11 # Static pages Home page
+rspec ./spec/requests/static_pages_spec.rb:12 # Static pages Home page
+rspec ./spec/requests/static_pages_spec.rb:33 # Static pages Contact page
+rspec ./spec/requests/static_pages_spec.rb:32 # Static pages Contact page
+
+Randomized with seed 21470
+
+Rubis:) git add .
+Rubis:) git commit -m "Finish layout and routes"
+[master d9af927] Finish layout and routes
+18 files changed, 267 insertions(+), 65 deletions(-)
+create mode 100644 app/assets/javascripts/users.js.coffee
+create mode 100644 app/assets/stylesheets/custom.css.scss
+create mode 100644 app/assets/stylesheets/users.css.scss
+create mode 100644 app/controllers/users_controller.rb
+create mode 100644 app/helpers/users_helper.rb
+create mode 100644 app/views/layouts/_footer.html.erb
+rewrite app/views/layouts/application.html.erb (94%)
+create mode 100644 app/views/static_pages/contact.html.erb
+create mode 100644 app/views/users/new.html.erb
+create mode 100644 example_user.rb
+rewrite spec/requests/static_pages_spec.rb (85%)
+create mode 100644 spec/requests/user_pages_spec.rb
+create mode 100644 spec/support/utilities.rb
+Rubis:) git checkout master
+Already on 'master'
+
