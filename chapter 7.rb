@@ -470,4 +470,49 @@ irb(main):002:0> user.update_attributes(name: "Example User",
         Rubis:) heroku logs
         !    No app specified.
         !    Run this command from an app folder or specify which app to use with --app APP.
+        Rubis:)
+        
+        Rubis:) git add .
+        Rubis:) git status
+        # On branch master
+        # Changes to be committed:
+        #   (use "git reset HEAD <file>..." to unstage)
+        #
+        #	new file:   chapter 7.rb
+        #	modified:   sample_app
+        #
+        # Changes not staged for commit:
+        #   (use "git add/rm <file>..." to update what will be committed)
+        #   (use "git checkout -- <file>..." to discard changes in working directory)
+        #   (commit or discard the untracked or modified content in submodules)
+        #
+        #	deleted:    old/sample_app
+        #	deleted:    old/sample_app.rb
+        #	modified:   sample_app (modified content)
+        #
+        Rubis:) git commit -m "Finish user signup"
+        [master f628f62] Finish user signup
+        2 files changed, 474 insertions(+), 1 deletion(-)
+        create mode 100644 chapter 7.rb
+        Rubis:) git push
+        Counting objects: 4, done.
+        Delta compression using up to 4 threads.
+        Compressing objects: 100% (3/3), done.
+        Writing objects: 100% (3/3), 4.46 KiB, done.
+        Total 3 (delta 1), reused 0 (delta 0)
+        To https://github.com/Sedclerk/sample_app.git
+        1c1f32b..f628f62  master -> master
+        Rubis:) git status
+        # On branch master
+        # Changes not staged for commit:
+        #   (use "git add/rm <file>..." to update what will be committed)
+        #   (use "git checkout -- <file>..." to discard changes in working directory)
+        #   (commit or discard the untracked or modified content in submodules)
+        #
+        #	deleted:    old/sample_app
+        #	deleted:    old/sample_app.rb
+        #	modified:   sample_app (modified content)
+        #
+        no changes added to commit (use "git add" and/or "git commit -a")
         Rubis:) 
+
